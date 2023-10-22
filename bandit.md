@@ -122,6 +122,9 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 ### Level 12 to Level 13
 
+The command cd changes the current directory. The command cp copies files and directories.
+
+
 
 
 
