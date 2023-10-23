@@ -115,7 +115,7 @@ I learnt that -d flag changes ls not to list the files within the specified dire
 base64 -d data.txt
 '''
 
-![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/fc3ee14b-5d6d-4da8-a984-41d3038667b4)
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/cd935254-cc23-435c-ace8-240192a83a2d)
 
 ### Level 11 to Level 12
 
@@ -133,7 +133,9 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 ### Level 12 to Level 13
 
-The command cd changes the current directory. The command cp copies files and directories.
+The first step was to create a directory using mkdir command and named it as mbuena.
+The command cp copies files and directories. So I copied the directory I just created.
+The command cd changes the current directory. To come back to the current directory I used to cd command.
 
 
 
