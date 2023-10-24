@@ -140,7 +140,7 @@ mkdir /tmp/buenapq
 The command cp copies files and directories. So I copied the directory I just created.
 The command cd changes the current directory. To navigate to the current directory I used the cd command. On listing out the directory, I found that data,txt file exists.
 xxd - make a hexdump or do the reverse. This command has to be used to create a hexdump of a file or to reverse the hexdump format to a binary output. In this level the application of xxd is to do the reverse. So the next step was to reverse the data.txt file to data using xxd command.
-Next I used to file command to know the file type of data. I got the output as gzip compressed dta,was 'data2.bin".
+Next I used the file command to know the file type of data. I got the output as gzip compressed data,was 'data2.bin".
 I quickly went through the manual for gzip and understood that, if  the  compressed  file  name is too long for its file system, gzip truncates it.  Gzip attempts to truncate only the parts of the file name longer than 3 characters. The command gzip -d will decompress the file.
 Before compressing the file data, I moved it to another file called file.gz. Then I typed the command ''' gzip -d file.gz ''' to decompress it. 
 The file type of file was bzip2 compressed data.
@@ -151,9 +151,9 @@ I moved the file to file.tar and then used the tar command to extract the file f
 '''
 tar xf file.tar
 '''
-On using the ls command, it dispayed data5.bin in the ist. I found the filetypr of data5.bin to be a tar archive. So after repeating the same process, I got data6.bin file in the list which was bzip2 compressed. After decompressing it, I checked the file type of data which was tar archive.
+On using the ls command, it dispayed data5.bin in the list. I found the filetype of data5.bin to be a tar archive. So after repeating the same process, I got data6.bin file in the list which was bzip2 compressed. After decompressing it, I checked the file type of data which was tar archive.
 I moved the file data to data1.tar and then typed ''' tar xf data1.tar '''
-The file data8.bin was decompressed and finally the file type of data wasASCII text. 
+The file data8.bin was decompressed and finally the file type of data was ASCII text. 
 On reading the file data, I got the password.
 
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/6b89da0d-4a87-4c4c-b060-ca9ff3408ae6)
