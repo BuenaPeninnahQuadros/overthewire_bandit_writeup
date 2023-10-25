@@ -78,7 +78,8 @@ cat var/lib/dpkg/info/bandit7.password
 
 ### Level 7 to Level 8
 
-grep command can print lines that match patterns
+The grep command can print lines that match patterns.
+Pipe operator is used to combine two or more commands.
 '''
 cat data.txt | grep millionth
 '''
