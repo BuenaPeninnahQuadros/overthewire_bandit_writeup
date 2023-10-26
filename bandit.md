@@ -5,7 +5,8 @@
 ssh bandit0@bandit.labs.overthewire.org -p 2220
 
 ### Level 0 to Level 1
-cat command concatenates files and prints the standard output
+ls is a command to list computer files and directories. On giving the command ls, it displays readme which means a file named readme exists.
+cat command concatenates files and prints the standard output. 
 '''
 cat readme
 '''
@@ -160,10 +161,22 @@ On reading the file data, I got the password.
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/6b89da0d-4a87-4c4c-b060-ca9ff3408ae6)
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/ece9c9b6-388f-4fd7-be7c-f4278bf76ab2)
 
+### Level 13 to Level 14
+
+ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.
+ -i identity_file:  Selects a file from which the identity (private key) for public key authentication is read.
+
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/bc1415aa-8504-4764-a945-e42fa4cd9d15)
+
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/e376947c-95de-494b-ae2a-c11898b6dc6c)
 
 
+### Level 14 to Level 15
 
+ The telnet command is used for interactive communication with another host using the TELNET protocol. To connect to the port 30000 on localhost, the command to be given is ''' telnet localhost 30000 '''
+![Screenshot 2023-10-26 235046](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/db00e42f-be53-4a5d-92ac-3dec18165787)
 
+### Level 15 to Level 16
 
 
 
