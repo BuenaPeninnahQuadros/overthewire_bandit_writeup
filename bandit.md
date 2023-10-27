@@ -178,9 +178,26 @@ ssh (SSH client) is a program for logging into a remote machine and for executin
 
 ### Level 15 to Level 16
 
+For this level we start by using the openssl s_client command.  This command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers.   
+'''-connect host:port ''' specifies the host and optional port to connect to.
+           
+![Screenshot 2023-10-27 204017](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/bf270cff-4125-404d-89be-e1ecb7166ee2)
 
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/34890f04-884b-42bb-949a-9401def23607)
 
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/53ea1af8-aeea-4709-ae83-c5697d324ce8)
 
+### Level 16 to Level 17
+
+ Nmap (“Network Mapper”) is an open source tool for network exploration and security auditing. The output from Nmap is a list of scanned targets, with supplemental information on each depending on the options used.
+ In this level we need to scan the port in the range 31000 and 32000. We use nmap as the command to scan the port.
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/94224a9c-b602-4149-963c-f3865d0681e6)
+
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/9f412a91-c7d3-4128-8ac1-0ddfee190c16)
+
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/88a7516c-3956-427a-847d-9553a8d4d417)
+
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/b34d3af3-404a-43b2-96b3-76664c84ed2f)
 
 
 
