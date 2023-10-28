@@ -140,11 +140,11 @@ The first step was to create a directory using mkdir command, naming it as buena
 mkdir /tmp/buenapq
 '''
 The command cp copies files and directories. So I copied the directory I just created.
-The command cd changes the current directory. To navigate to the current directory I used the cd command. On listing out the directory, I found that data,txt file exists.
+The command cd changes the current directory. To navigate to the current directory I used the cd command. On listing out the directory, I found that data.txt file exists.
 xxd - make a hexdump or do the reverse. This command has to be used to create a hexdump of a file or to reverse the hexdump format to a binary output. In this level the application of xxd is to do the reverse. So the next step was to reverse the data.txt file to data using xxd command.
 Next I used the file command to know the file type of data. I got the output as gzip compressed data,was 'data2.bin".
 I quickly went through the manual for gzip and understood that, if  the  compressed  file  name is too long for its file system, gzip truncates it.  Gzip attempts to truncate only the parts of the file name longer than 3 characters. The command gzip -d will decompress the file.
-Before compressing the file data, I moved it to another file called file.gz. Then I typed the command ''' gzip -d file.gz ''' to decompress it. 
+Before decompressing the file data, I moved it to another file called file.gz. Then I typed the command ''' gzip -d file.gz ''' to decompress it. 
 The file type of file was bzip2 compressed data.
 bzip2 - compresses  files  using the Burrows-Wheeler block sorting text compression algorithm, and Huff‐man coding.
 I moved the file to file.bz2 and then gave the command ''' bzip2 -d file.bz2 ''' to decompress it. Again on listing out, I saw file in my directory and its file type was again gzip compressed. I moved the file to file.gz and then decompressed it.
@@ -165,8 +165,10 @@ On reading the file data, I got the password.
 
 ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.
  -i identity_file:  Selects a file from which the identity (private key) for public key authentication is read.
+ The password was stored in /etc/bandit_pass/bandit14.
 
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/bc1415aa-8504-4764-a945-e42fa4cd9d15)
+
 
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/e376947c-95de-494b-ae2a-c11898b6dc6c)
 
