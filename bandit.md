@@ -135,27 +135,29 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 ### Level 12 to Level 13
 
-The first step was to create a directory using mkdir command, naming it as buenapq.
+The first step was to create a directory using mkdir command, naming it as buenapq. <br>
 '''
 mkdir /tmp/buenapq
 '''
+<br>
 The command cp copies files and directories. So I copied the directory I just created.
-The command cd changes the current directory. To navigate to the current directory I used the cd command. On listing out the directory, I found that data.txt file exists.
-xxd - make a hexdump or do the reverse. This command has to be used to create a hexdump of a file or to reverse the hexdump format to a binary output. In this level the application of xxd is to do the reverse. So the next step was to reverse the data.txt file to data using xxd command.
+The command cd changes the current directory. To navigate to the current directory I used the cd command. On listing out the directory, I found that data.txt file exists. <br>
+xxd - make a hexdump or do the reverse. This command has to be used to create a hexdump of a file or to reverse the hexdump format to a binary output. In this level the application of xxd is to do the reverse. So the next step was to reverse the data.txt file to data using xxd command. <br>
 Next I used the file command to know the file type of data. I got the output as gzip compressed data,was 'data2.bin".
 I quickly went through the manual for gzip and understood that, if  the  compressed  file  name is too long for its file system, gzip truncates it.  Gzip attempts to truncate only the parts of the file name longer than 3 characters. The command gzip -d will decompress the file.
 Before decompressing the file data, I moved it to another file called file.gz. Then I typed the command ''' gzip -d file.gz ''' to decompress it. 
-The file type of file was bzip2 compressed data.
+The file type of file was bzip2 compressed data. <br>
 bzip2 - compresses  files  using the Burrows-Wheeler block sorting text compression algorithm, and Huff‐man coding.
 I moved the file to file.bz2 and then gave the command ''' bzip2 -d file.bz2 ''' to decompress it. Again on listing out, I saw file in my directory and its file type was again gzip compressed. I moved the file to file.gz and then decompressed it.
-Now on seeking the file type on file, it displayed POSIX tar archive(GNU).
+Now on seeking the file type on file, it displayed POSIX tar archive(GNU). <br>
 I moved the file to file.tar and then used the tar command to extract the file from file.tar.
 '''
 tar xf file.tar
 '''
+<br>
 On using the ls command, it dispayed data5.bin in the list. I found the filetype of data5.bin to be a tar archive. So after repeating the same process, I got data6.bin file in the list which was bzip2 compressed. After decompressing it, I checked the file type of data which was tar archive.
 I moved the file data to data1.tar and then typed ''' tar xf data1.tar '''
-The file data8.bin was decompressed and finally the file type of data was ASCII text. 
+The file data8.bin was decompressed and finally the file type of data was ASCII text. <br>
 On reading the file data, I got the password.
 
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/6b89da0d-4a87-4c4c-b060-ca9ff3408ae6)
@@ -163,7 +165,7 @@ On reading the file data, I got the password.
 
 ### Level 13 to Level 14
 
-ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.
+ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine. <br>
  -i identity_file:  Selects a file from which the identity (private key) for public key authentication is read.
  After logging in to bandit14 using the sshkey.private, I read the file /etc/bandit_pass/bandit14 to get the password.
 
@@ -180,7 +182,7 @@ ssh (SSH client) is a program for logging into a remote machine and for executin
 
 ### Level 15 to Level 16
 
-For this level we start by using the openssl s_client command.  This command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers.   
+For this level we start by using the openssl s_client command.  This command implements a generic SSL/TLS client which connects to a remote host using SSL/TLS. It is a very useful diagnostic tool for SSL servers.   <br>
 '''-connect host:port ''' specifies the host and optional port to connect to.
            
 ![Screenshot 2023-10-27 204017](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/bf270cff-4125-404d-89be-e1ecb7166ee2)
@@ -191,15 +193,40 @@ For this level we start by using the openssl s_client command.  This command imp
 
 ### Level 16 to Level 17
 
- Nmap (“Network Mapper”) is an open source tool for network exploration and security auditing. The output from Nmap is a list of scanned targets, with supplemental information on each depending on the options used.
+ Nmap (“Network Mapper”) is an open source tool for network exploration and security auditing. The output from Nmap is a list of scanned targets, with supplemental information on each depending on the options used. <br>
  In this level we need to scan the port in the range 31000 and 32000. We use nmap as the command to scan the port.
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/94224a9c-b602-4149-963c-f3865d0681e6)
+After giving the nmap command it displays a list of those ports that are open.
 
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/9f412a91-c7d3-4128-8ac1-0ddfee190c16)
+Ports that are open and speak ssl can be identified. From this list, it is clearly given that 31790 port is open and its service is ssl/unknown.
 
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/88a7516c-3956-427a-847d-9553a8d4d417)
+On realizing that 31790 port is the right one, I gave the command ''' openssl s_client -connect localhost 31790 ''' to connect to the port and to retrieve further information.
 
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/b34d3af3-404a-43b2-96b3-76664c84ed2f)
+A RSA private key is displayed.
+I stored this private key in a directory called band17.
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/f058c37f-a9b8-4de6-8369-7d450771f177)
+
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/4e6da509-df2e-46ca-ad65-e03781d822b2)
+  chmod - change file mode bits
+ chmod changes the file mode bits of each given file according to mode, which can be either a symbolic representation of changes to make, or an octal  number  representing the bit pattern for the new mode bits. <br>
+ nano  is  a  small and friendly editor.  It copies the look and feel of Pico, but is free software, and implements several features that Pico lacks, such as: opening multiple files, scrolling per line, undo/redo, syntax coloring, line numbering, and soft-wrapping overlong lines.
+
+### Level 17 to Level 18
+
+  diff - compare files line by line <br>
+  I used the command diff to read the 2 files and it displayed the passwords.  
+
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/87d162de-249e-4da3-a6af-a1363261ad04)
+
+### Level 18 to Level 19
+
+After submitting the password from passwords.new file, I was logged in to bandit18.
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/6d9e1813-343b-4f27-a3bb-3a08018ccfb8)
+
+### Level 19 to Level 20
 
 
 
