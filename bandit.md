@@ -165,7 +165,7 @@ On reading the file data, I got the password.
 
 ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.
  -i identity_file:  Selects a file from which the identity (private key) for public key authentication is read.
- The password was stored in /etc/bandit_pass/bandit14.
+ After logging in to bandit14 using the sshkey.private, I read the file /etc/bandit_pass/bandit14 to get the password.
 
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/bc1415aa-8504-4764-a945-e42fa4cd9d15)
 
