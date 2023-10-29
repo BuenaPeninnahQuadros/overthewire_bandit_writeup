@@ -225,8 +225,25 @@ I stored this private key in a directory called band17.
 
 After submitting the password from passwords.new file, I was logged in to bandit18.
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/6d9e1813-343b-4f27-a3bb-3a08018ccfb8)
+I received the text, "Bye-Bye" at the end. <br>
+Later, I gave the command, <br>
+'''ssh bandit18@bandit.labs.overthewire.org -p 2220 -t/bin/sh ''' and then read the file readme to get the password for level 19.
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/a146cc77-a08a-42d8-969a-ad9d7a539204)
+
 
 ### Level 19 to Level 20
+
+setuid() sets the effective user ID of the calling process.
+On giving the ls -la command it displayed a list, where ./bandit20-d0 was highlighted. I used the cat command to read the password. 
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/450f298c-b95f-44ff-af39-90b23c921479)
+
+### Level 20 to Level 21
+While browsing about the nc command, I understood that netcat command is a simple unix utility that reads and writes data across network connections using TCP, UDP protocol.
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/e291e718-19d8-49d7-a9b7-d3ccefc07d0a)
+In another terminal, I used the nc -lvp command with a random port number which is 9999, in my case. This port was connected with the ./suconnect file and after submitting the level 20 password, I got the password to the next level.
+![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/b8bde404-599c-429e-ba9d-5f646a0edca0)
+
+
 
 
 
