@@ -31,13 +31,14 @@ cat "spaces in this filename"
 
 ### Level 3 to Level 4
 
-ls -a is the command to list all files/folders
-find is the command to search all files in a diectory
+ls -a is the command to list all files/folders <br>
+find is the command to search all files in a diectory. <br>
 '''
 ls -a
 find .
 cat ./inhere/.hidden
-'''
+''' <br>
+In Unix-like and some other operating systems, find is a command-line utility that locates files based on some user-specified criteria and either prints the pathname of each matched object or, if another action is requested, performs that action on each matched object.
 ![image](https://github.com/BuenaPeninnahQuadros/overthewire_bandit_writeup/assets/85785379/72e077ce-0b1b-4ee1-9f4a-5e1e1e711c17)
 
 
